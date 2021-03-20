@@ -1,30 +1,52 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div>
   <router-view/>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+<style>
+  
+/**样式初始化 */
+*{
+  margin: 0;
+  padding: 0;
 }
-
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+li{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+  color: #fff;
+}
+body {
+    /* font-size: 12px; */
+    color: #333;
+    background: #ededed;
+    font-family: "Microsoft Yahei";
+}
+input, button {
+    border: 0 none;
+    outline-style: none;
+    font-family: "Microsoft Yahei";
+}
+/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
+  ::-webkit-scrollbar{
+    width: 7px;
+    height: 7px;
+    background-color: #F5F5F5;
   }
-}
+
+  /*定义滚动条轨道 内阴影+圆角*/
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background-color: #F5F5F5;
+  }
+
+  /*定义滑块 内阴影+圆角*/
+  ::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, .1);
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .1);
+    background-color: #c8c8c8;
+  }
 </style>
